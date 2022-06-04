@@ -42,3 +42,28 @@ function doInput(event) {
 function doAction2() {
   data2.messages = "<li>" + data2.message2 + "</li>" + data2.messages;
 }
+
+let data3 = {
+  message: "Hello Vue!",
+  style: "font-size:20px; color: red;"
+};
+let app3 = new Vue({
+  el: "#app3",
+  data: data3
+});
+function doChange3(event) {
+  data3.style = "font-size:" + event.target.value + "px; color:red;";
+}
+let data4 = {
+  message: "Hello Vue!",
+  isRed: true,
+  isBlue: false
+};
+let app4 = new Vue({
+  el: "#app4",
+  data: data4
+});
+function doAction4() {
+  data4.isRed = !data4.isRed;
+  data4.isBlue = !data4.isBlue;
+}
