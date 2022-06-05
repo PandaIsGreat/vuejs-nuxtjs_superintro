@@ -39,6 +39,99 @@
     <hr />
     <button onclick="doAction4();">click</button>
 
+    <!-- Chapter2 object2-->
+    <div id="app5">
+      <p :class="classes">{{message}}</p>
+    </div>
+    <hr />
+    <button onclick="doAction5();">click</button>
+
+    <!-- Chapter2 object3-->
+    <div id="app6">
+      <p :style="styles">{{message}}</p>
+    </div>
+
+    <!-- Chapter2 v-if-->
+    <div id="app7">
+      <p v-if="flag" class="ok">正常</p>
+      <p v-else class="ng">異常</p>
+    </div>
+    <button onclick="doAction7();">click</button>
+
+    <!-- Chapter2 template-->
+    <div id="app8">
+      <template v-if="flag">
+        <p>table</p>
+        <table>
+          <tr>
+            <th>Name</th>
+            <th>mail</th>
+          </tr>
+        </table>
+      </template>
+      <template v-else>
+        <p>list</p>
+        <ul>
+          <li>taro's address is taro@yamada</li>
+        </ul>
+      </template>
+    </div>
+    <button onclick="doAction8();">click</button>
+
+    <!-- Chapter2 v-for index-->
+    <div id="app9">
+      <p>table</p>
+      <table>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>mail</th>
+        </tr>
+        <tr v-for="(item,id) in items">
+          <td>{{id}}</td>
+          <td>{{item.name}}</td>
+          <td>{{item.mail}}</td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Chapter2 v-for index-->
+    <div id="app10">
+      <p>table</p>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>mail</th>
+        </tr>
+        <tr v-for="(item,key) in items">
+          <td>{{key}}</td>
+          <td>{{item.mail}}</td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Chapter2 v-for v-if-->
+    <div id="app11">
+      <p>table</p>
+      <table>
+        <tr>
+          <th>Id</th>
+          <th>name</th>
+          <th>mail</th>
+        </tr>
+        <tr v-for="(item,index) in items" v-if="index % 2 == 0">
+          <td>{{index}}</td>
+          <td>{{item.name}}</td>
+          <td>{{item.mail}}</td>
+        </tr>
+        <tr v-else>
+          <td>xxx</td>
+          <td>xxxxxxxxx</td>
+          <td>xxxxxxxxxx</td>
+        </tr>
+      </table>
+    </div>
+
     <!-- development version, includes helpful console warnings -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script src="src/main.js"></script>

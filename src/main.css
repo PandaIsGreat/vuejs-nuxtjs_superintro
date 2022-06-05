@@ -10,3 +10,28 @@
   font-style: italic;
   color: blue;
 }
+.ok {
+  font-size: 24px;
+  color: blue;
+  padding: 5px 10px;
+  border: 2px solid red;
+}
+.ng {
+  font-size: 20pt;
+  color: gray;
+}
+table tr th {
+  font-size: 16pt;
+  color: white;
+  background-color: blue;
+  padding: 5px 15px;
+}
+table tr td {
+  font-size: 16pt;
+  color: gray;
+  border: 1px solid gray;
+}
+li {
+  font-size: 16pt;
+  color: gray;
+}

@@ -67,3 +67,86 @@ function doAction4() {
   data4.isRed = !data4.isRed;
   data4.isBlue = !data4.isBlue;
 }
+
+let classObj = { red: true, blue: false };
+let data5 = {
+  message: "Hello Vue!",
+  classes: classObj
+};
+let app5 = new Vue({
+  el: "#app5",
+  data: data5
+});
+function doAction5() {
+  classObj.red = !classObj.red;
+  classObj.blue = !classObj.blue;
+}
+let data6 = {
+  message: "Hello Vue!",
+  styles: {
+    margin: "10px",
+    padding: "5px 20px",
+    fontSize: "20px",
+    color: "red",
+    backgroundColor: "#fee",
+    border: "3px solid blue"
+  }
+};
+let app6 = new Vue({
+  el: "#app6",
+  data: data6
+});
+
+let data7 = {
+  flag: true
+};
+let app7 = new Vue({
+  el: "#app7",
+  data: data7
+});
+function doAction7() {
+  data7.flag = !data7.flag;
+}
+
+let data8 = {
+  flag: true
+};
+let app8 = new Vue({
+  el: "#app8",
+  data: data8
+});
+function doAction8() {
+  data8.flag = !data8.flag;
+}
+let data9 = {
+  items: [
+    { name: "taro", mail: "taro@yamada" },
+    { name: "hanako", mail: "hanako@flower" }
+  ]
+};
+let app9 = new Vue({
+  el: "#app9",
+  data: data9
+});
+
+let data10 = {
+  items: { taro: { mail: "taro@yamada" }, hanako: { mail: "hanako@flower" } }
+};
+let app10 = new Vue({
+  el: "#app10",
+  data: data10
+});
+
+let data11 = {
+  items: [
+    { name: "taro", mail: "taro@yamada" },
+    { name: "hanako", mail: "hanako@flower" },
+    { name: "sachiko", mail: "sashico@flower" },
+    { name: "sachiko2", mail: "sashico2@flower" },
+    { name: "sachiko3", mail: "sashic3o@flower" }
+  ]
+};
+let app11 = new Vue({
+  el: "#app11",
+  data: data11
+});
